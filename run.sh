@@ -6,5 +6,5 @@ then
     echo "Illegal number of parameters"
 else
     # compile and execute the program in Python3
-    python3 AuburnScoreTracker.py $1
+    python3 AUMBScoreTracker.py $1
 fi
