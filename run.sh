@@ -2,9 +2,11 @@
 # check for phone number argument
 if test "$#" -ne 1; 
 then
-    # don't run program
-    echo "Illegal number of parameters"
+    echo "Twilio not active"
+    # compile and execute the program in Python3
+    python3 AUMBScoreTracker.py
 else
+    echo "Twilio active"
     # compile and execute the program in Python3
     python3 AUMBScoreTracker.py $1
 fi
