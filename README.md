@@ -28,8 +28,13 @@ Example:
 In order to use this application with only the Twitter feature the run.sh script with the command:
 >./run.sh
 
-The application is now running, and will provide updates for the final scores of the Auburn Men's Basketball games. If you want to check if the application is running simply type the command:
->ps aux | grep AUMBScoreTracker.py
+The application is now running, and will provide updates for the final scores of the Auburn Men's Basketball games.
+
+If you want to check if the application is running, simply type the command:
+>ps aux | grep AUMBScoreTracker.py <br/>
+
+If you want to kill the application, simply type the command:
+>pkill -f AUMBScoreTracker.py
 
 _*Note: There is a current bug in the tweepy library when it comes to cloning from github._
 
@@ -44,6 +49,7 @@ To-do:
 * Test during the season
 
 ## Status
+Version: 1.0.1 Beta <br/>
 Project is: _finished_
 
 ## Language details
