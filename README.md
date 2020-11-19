@@ -31,12 +31,17 @@ In order to use this application with only the Twitter feature the run.sh script
 The application is now running, and will provide updates for the final scores of the Auburn Men's Basketball games. If you want to check if the application is running simply type the command:
 >ps aux | grep AUMBScoreTracker.py
 
+_*Note: There is a current bug in the tweepy library when it comes to cloning from github._
+
 ## Features
 Implemented:
 * Twilio
 * Gets final score
 * Text final score
 * Tweets final scores
+
+To-do:
+* Test during the season
 
 ## Status
 Project is: _finished_
