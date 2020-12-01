@@ -40,16 +40,15 @@ _*Note: There is a current bug in the tweepy library when it comes to cloning fr
 
 ## Features
 Implemented:
-* Twilio
-* Gets final score
-* Text final score
-* Tweets final scores
+* Gets final score via web scraping
+* Text final score using Twilio
+* Tweets final scores using tweepy
 
 To-do:
 * Test during the season
 
 ## Status
-Version: 1.0.1 Beta <br/>
+Version: 2.0.0 Beta <br/>
 Project is: _finished_
 
 ## Language details
