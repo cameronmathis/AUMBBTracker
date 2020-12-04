@@ -44,11 +44,20 @@ Implemented:
 * Text final score using Twilio
 * Tweets final scores using tweepy
 
-To-do:
+Work in progress:
 * Test during the season
+* Solve untrusted SSL certificate exception
+
+Feature features:
+* Have different tweets for home and away games
+* Tweet that a game is about to start
+* Tweet halftime scores
+* Tweet that a game is headed to overtime
+* Tweet that the starting line up is changing from last game
+* Tweet post game stats
 
 ## Status
-Version: 2.0.0 Beta <br/>
+Version: 2.0.1 Beta <br/>
 Project is: _finished_
 
 ## Language details

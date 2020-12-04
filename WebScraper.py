@@ -4,7 +4,7 @@ import requests
 
 def getCurrentRecord():
     url = "https://www.espn.com/mens-college-basketball/team/_/id/2/auburn-tigers"
-    page = requests.get(url)
+    page = requests.get(url, verify = False)
     soup = BeautifulSoup(page.content, 'lxml')
 
     record = soup.find('ul', class_ = 'ClubhouseHeader__Record')
@@ -52,7 +52,7 @@ def getTodaysGame():
     #get todays date
     todaysDate = datetime.today().strftime('%a, %b %d')
     url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2"
-    page = requests.get(url)
+    page = requests.get(url, verify = False)
     soup = BeautifulSoup(page.content, 'lxml')
 
     table = soup.find('tbody', class_='Table__TBODY')
