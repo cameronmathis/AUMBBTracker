@@ -23,17 +23,21 @@ In order to use this application with the texting feature the run.sh script with
 >./run.sh [phone number]
 
 Example:
->./run.sh '+13345550198'
+>./runScoreTracker.sh '+13345550198'
 
 In order to use this application with only the Twitter feature the run.sh script with the command:
->./run.sh
+>./runScoreTracker.sh
 
 The application is now running, and will provide updates for the final scores of the Auburn Men's Basketball games.
 
 If you want to check if the application is running, simply type the command:
 >ps aux | grep AUMBScoreTracker.py <br/>
 
-If you want to kill the application, simply type the command:
+I am currently working on an untrusted SSL certificate exception that causes the application to shut down. In the mean time, running this script will ensure that the application stays running 24/7:
+>./runProcessChecker
+
+If you want to kill the application, simply type the commands:
+>pkill -f ProcessChecker.py
 >pkill -f AUMBScoreTracker.py
 
 _*Note: There is a current bug in the tweepy library when it comes to cloning from github._
@@ -57,8 +61,8 @@ Feature features:
 * Tweet post game stats
 
 ## Status
-Version: 2.0.1 Beta <br/>
-Project is: _finished_
+Version: 2.1.0 Alpha <br/>
+Project is: _in progress_
 
 ## Language details
 Language used: Python </br>
