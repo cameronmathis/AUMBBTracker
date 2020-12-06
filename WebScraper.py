@@ -50,7 +50,7 @@ def getGamesScore():
 
 def getTodaysGame():
     #get todays date
-    todaysDate = datetime.today().strftime('%a, %b %d')
+    todaysDate = datetime.today().strftime('%a, %b %d').replace(' 0', ' ')
     url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2"
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'lxml')

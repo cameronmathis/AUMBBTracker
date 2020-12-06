@@ -1,15 +1,20 @@
 import os
+from auth import (
+    phoneNumber
+)
 
 # check if the app is still running
 while True:
-    processName = 'AUMBScoreTracker.py'
+    processName = 'AUMBTracker.py'
 
     tmp = os.popen('ps -Af').read()
 
     if processName not in tmp[:]:
         print('The process is not running. Restarting now.')
-        newprocess = "./runScoreTracker.sh '+13347146447'"
-        os.system(newprocess)  
+        processOne = 'source env/bin/activate'
+        processTwo = './runTracker.sh ' + phoneNumber
+        os.system(processOne)  
+        os.system(processTwo)  
     else:
         print('The process is running.')
 

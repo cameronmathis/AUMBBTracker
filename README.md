@@ -1,4 +1,4 @@
-# AUMB Score Tracker
+# AUMB Tracker
 This is a Python Application that tweets final score updates for the Auburn Men's Basketball team while also texting the results to my phone.
 
 ## Table of contents
@@ -10,7 +10,7 @@ This is a Python Application that tweets final score updates for the Auburn Men'
 * [Contact](#contact)
 
 ## General info
-This is a project I decided I wanted to do in order to familiarize myself with Python Automation. It runs on my RaspberryPi and tweets/text me the final score to the Auburn Men's Basketball games. The Twitter account associated with this project can be found [here](https://twitter.com/AumbScore). If you have a Twilio account, this script can be run to text the scores to any phone number using the setup below.
+This is a project I decided I wanted to do in order to familiarize myself with Python Automation. It runs on my RaspberryPi and tweets/text me the final score to the Auburn Men's Basketball games. The Twitter account associated with this project can be found [here](https://twitter.com/AUMBtracker). If you have a Twilio account, this script can be run to text the scores to any phone number using the setup below.
 
 ## Setup
 _Disclaimer: All instructions given are for a linux based machine._ <br/>
@@ -23,22 +23,22 @@ In order to use this application with the texting feature the run.sh script with
 >./run.sh [phone number]
 
 Example:
->./runScoreTracker.sh '+13345550198'
+>./runTracker.sh '+13345550198'
 
 In order to use this application with only the Twitter feature the run.sh script with the command:
->./runScoreTracker.sh
+>./runTracker.sh
 
 The application is now running, and will provide updates for the final scores of the Auburn Men's Basketball games.
 
 If you want to check if the application is running, simply type the command:
->ps aux | grep AUMBScoreTracker.py <br/>
+>ps aux | grep AUMBTracker.py <br/>
 
 I am currently working on an untrusted SSL certificate exception that causes the application to shut down. In the mean time, running this script will ensure that the application stays running 24/7:
->./runProcessChecker
+>./runProcessChecker.sh
 
 If you want to kill the application, simply type the commands:
->pkill -f ProcessChecker.py
->pkill -f AUMBScoreTracker.py
+>pkill -f ProcessChecker.py <br/>
+>pkill -f AUMBTracker.py
 
 _*Note: There is a current bug in the tweepy library when it comes to cloning from github._
 
@@ -61,7 +61,7 @@ Feature features:
 * Tweet post game stats
 
 ## Status
-Version: 2.1.0 Alpha <br/>
+Version: 2.1.1 Alpha <br/>
 Project is: _in progress_
 
 ## Language details
