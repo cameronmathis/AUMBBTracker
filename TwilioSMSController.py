@@ -13,6 +13,12 @@ account_sid = twilioAccountSID
 auth_token = twilioAuthToken
 client = Client(account_sid, auth_token)
 
+'''
+Sends a text
+
+Parameters: 
+    txt - the text to be sent
+'''
 def sendSMS(msg, num):
     message = client.messages \
                     .create(

@@ -18,6 +18,12 @@ try:
 except:
     print("Error during Twitter authentication")
 
+'''
+Sends a tweet
+
+Parameters: 
+    txt - the tweet to be sent
+'''
 def sendTweet(txt):
     api.update_status(status=txt)
     print("Tweet sent")

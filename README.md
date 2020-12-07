@@ -44,9 +44,9 @@ _*Note: There is a current bug in the tweepy library when it comes to cloning fr
 
 ## Features
 Implemented:
-* Gets final score via web scraping
-* Text final score using Twilio
+* Tweets that a game is about to start
 * Tweets final scores using tweepy
+* Texts final score using Twilio
 
 Work in progress:
 * Test during the season
@@ -54,7 +54,6 @@ Work in progress:
 
 Feature features:
 * Have different tweets for home and away games
-* Tweet that a game is about to start
 * Tweet halftime scores
 * Tweet that a game is headed to overtime
 * Tweet that the starting line up is changing from last game
