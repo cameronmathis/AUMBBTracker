@@ -32,7 +32,6 @@ Returns the row corresponding to today's game from Auburn's schedule on ESPN
 def getTodaysGame():
     #get todays date
     todaysDate = datetime.today().strftime('%a, %b %d').replace(' 0', ' ')
-    todaysDate = 'Sat, Dec 12'
     url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2"
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'lxml')
@@ -64,7 +63,25 @@ def getGameTime():
         i += 1
 
 '''
-Returns Auburn's current record from ESPN
+Returns the location from Auburn's game today according to ESPN
+'''
+def getGamesLocation():
+    todaysGame = getTodaysGame()
+    
+    cells = todaysGame.find_all('td')
+    i = 0
+    for cell in cells:
+        if i == 1:
+            if cell.find('span').text == 'vs':
+                return 'against'
+            elif cell.find('span').text == '@':
+                return 'at'
+            else:
+                return '?'
+        i += 1
+
+'''
+Returns Auburn's current record according to ESPN
 '''
 def getCurrentRecord():
     url = "https://www.espn.com/mens-college-basketball/team/_/id/2/auburn-tigers"
@@ -76,7 +93,7 @@ def getCurrentRecord():
     return record.li.text
 
 '''
-Returns the opponent from Auburn's game today from ESPN
+Returns the opponent from Auburn's game today according to ESPN
 '''
 def getGamesOpponent():
     todaysGame = getTodaysGame()
@@ -86,7 +103,7 @@ def getGamesOpponent():
     return opponent
 
 '''
-Returns the final result from Auburn's game today from ESPN
+Returns the final result from Auburn's game today according to ESPN
 '''
 def getGamesResult():
     todaysGame = getTodaysGame()
@@ -104,7 +121,7 @@ def getGamesResult():
         i += 1
 
 '''
-Returns the final score from Auburn's game today from ESPN
+Returns the final score from Auburn's game today according to ESPN
 '''
 def getGamesScore():
     todaysGame = getTodaysGame()

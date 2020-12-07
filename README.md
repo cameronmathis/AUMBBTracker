@@ -45,7 +45,8 @@ _*Note: There is a current bug in the tweepy library when it comes to cloning fr
 ## Features
 Implemented:
 * Tweets that a game is about to start
-* Tweets final scores using tweepy
+* Tweets the final scores
+* The tweets are different for home and away games
 * Texts final score using Twilio
 
 Work in progress:
@@ -53,14 +54,13 @@ Work in progress:
 * Solve untrusted SSL certificate exception
 
 Feature features:
-* Have different tweets for home and away games
 * Tweet halftime scores
 * Tweet that a game is headed to overtime
 * Tweet that the starting line up is changing from last game
 * Tweet post game stats
 
 ## Status
-Version: 2.1.1 Alpha <br/>
+Version: 2.1.2 Alpha <br/>
 Project is: _in progress_
 
 ## Language details
