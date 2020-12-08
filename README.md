@@ -23,10 +23,10 @@ In order to use this application with the texting feature the run.sh script with
 >./run.sh [phone number]
 
 Example:
->./runTracker.sh '+13345550198'
+>./runAUMBTracker.sh '+13345550198'
 
 In order to use this application with only the Twitter feature the run.sh script with the command:
->./runTracker.sh
+>./runAUMBTracker.sh
 
 The application is now running, and will provide updates for the final scores of the Auburn Men's Basketball games.
 

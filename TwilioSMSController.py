@@ -18,6 +18,7 @@ Sends a text
 
 Parameters: 
     txt - the text to be sent
+    num - the number to send the text to
 '''
 def sendSMS(msg, num):
     message = client.messages \

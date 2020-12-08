@@ -12,7 +12,7 @@ while True:
     if processName not in tmp[:]:
         print('The process is not running. Restarting now.')
         processOne = 'source env/bin/activate'
-        processTwo = './runTracker.sh ' + phoneNumber
+        processTwo = './runAUMBTracker.sh ' + phoneNumber
         os.system(processOne)  
         os.system(processTwo)  
     else:
