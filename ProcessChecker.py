@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 from auth import (
     phoneNumber
@@ -10,11 +11,6 @@ while True:
     tmp = os.popen('ps -Af').read()
 
     if processName not in tmp[:]:
-        print('The process is not running. Restarting now.')
-        processOne = 'source env/bin/activate'
-        processTwo = './runAUMBTracker.sh ' + phoneNumber
-        os.system(processOne)  
-        os.system(processTwo)  
-    else:
-        print('The process is running.')
-
+        print(f'\nThe process is not running. Restarting now ({datetime.now()}).\n')
+        process = './runAUMBTracker.sh ' + phoneNumber 
+        os.system(process)  

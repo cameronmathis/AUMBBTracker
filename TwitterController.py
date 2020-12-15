@@ -14,9 +14,9 @@ api = tweepy.API(auth)
 
 try:
     api.verify_credentials()
-    print("Twitter authentication successful")
+    print("\nTwitter authentication successful\n")
 except:
-    print("Error during Twitter authentication")
+    print("\nError during Twitter authentication\n")
 
 '''
 Sends a tweet
@@ -26,4 +26,4 @@ Parameters:
 '''
 def sendTweet(txt):
     api.update_status(status=txt)
-    print("Tweet sent")
+    print("\nTweet sent\n")

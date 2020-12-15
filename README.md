@@ -16,11 +16,9 @@ This is a project I decided I wanted to do in order to familiarize myself with P
 _Disclaimer: All instructions given are for a linux based machine._ <br/>
 In order to run this application you will need a Twitter Developer Account and a Twilio account. It is recommended that you use environment variables or an authentication file to store your account credentials, but you can also hard code them if you would like. A link on setting up environment variables can be found [here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html). <br/>
 Once you have your Twilio account set up, clone this repo onto your local machine and navigate to the project folder. <br/>
-First activate the python virtual environment with the command:
->source env/bin/activate
 
 In order to use this application with the texting feature the run.sh script with the command:
->./run.sh [phone number]
+>./runAUMBTracker.sh.sh [phone number]
 
 Example:
 >./runAUMBTracker.sh '+13345550198'
@@ -60,7 +58,7 @@ Feature features:
 * Tweet post game stats
 
 ## Status
-Version: 2.1.2 Alpha <br/>
+Version: 2.1.3 Alpha <br/>
 Project is: _in progress_
 
 ## Language details

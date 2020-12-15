@@ -27,4 +27,4 @@ def sendSMS(msg, num):
                         from_= twilioPhoneNumber,
                         to=num
                     )              
-    print(f"Message sent with sid: {message.sid}")
+    print(f"\nMessage sent with sid: {message.sid}\n")
