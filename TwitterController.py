@@ -1,3 +1,4 @@
+from datetime import datetime
 import tweepy
 from auth import (
     twitterConsumerKey,
@@ -26,4 +27,4 @@ Parameters:
 '''
 def sendTweet(txt):
     api.update_status(status=txt)
-    print("\nTweet sent\n")
+    print(f"\nTweet sent at {datetime.now()}\n")

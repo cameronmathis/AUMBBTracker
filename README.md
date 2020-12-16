@@ -42,13 +42,12 @@ _*Note: There is a current bug in the tweepy library when it comes to cloning fr
 
 ## Features
 Implemented:
-* Tweets that a game is about to start
 * Tweets the final scores
 * The tweets are different for home and away games
 * Texts final score using Twilio
 
 Work in progress:
-* Test during the season
+* Tweets that a game is about to start
 * Solve untrusted SSL certificate exception
 
 Feature features:
@@ -58,7 +57,7 @@ Feature features:
 * Tweet post game stats
 
 ## Status
-Version: 2.1.3 Alpha <br/>
+Version: 2.1.4 Alpha <br/>
 Project is: _in progress_
 
 ## Language details

@@ -1,5 +1,5 @@
 # Download the helper library from https://www.twilio.com/docs/python/install
-import os
+from datetime import datetime
 from twilio.rest import Client
 from auth import (
     twilioAccountSID,
@@ -27,4 +27,4 @@ def sendSMS(msg, num):
                         from_= twilioPhoneNumber,
                         to=num
                     )              
-    print(f"\nMessage sent with sid: {message.sid}\n")
+    print(f"\nMessage sent with sid: {message.sid} at {datetime.now()}\n")

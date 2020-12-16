@@ -10,12 +10,12 @@ updatedRecord = getCurrentRecord()
 storedRecord = getCurrentRecord()
 
 # initialize other variables
-haveTweetedPreGame = False
+haveTweetedPreGame = True
 
 # run the loop every minute as to not overload the CPU
 while (not time.sleep(60)):
     # check if a game happens today
-    if isGameToday() and not haveTweetedPreGame:
+    if (not haveTweetedPreGame) and isGameToday():
         # convert game time to datetime format
         tipOffTime = getGameTime()
         # convert tip off time from EST to CT
@@ -34,5 +34,5 @@ while (not time.sleep(60)):
         storedRecord = getCurrentRecord()
         sendTweet(f"The result of today's game {getGamesLocation()} {getGamesOpponent()} was a {getGamesResult()}, with a final score of {getGamesScore()}.")
         if len(sys.argv) == 2:
-            sendSMS(f"The result of today's game {getGamesLocation()} {getGamesOpponent()} was a {getGamesResult()}, with a final score of {getGamesScore}.", sys.argv[1])
+            sendSMS(f"The result of today's game {getGamesLocation()} {getGamesOpponent()} was a {getGamesResult()}, with a final score of {getGamesScore()}.", sys.argv[1])
         haveTweetedPreGame = False

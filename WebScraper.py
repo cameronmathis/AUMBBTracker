@@ -32,6 +32,7 @@ Returns the row corresponding to today's game from Auburn's schedule on ESPN
 def getTodaysGame():
     #get todays date
     todaysDate = datetime.today().strftime('%a, %b %d').replace(' 0', ' ')
+    todaysDate = 'Sat, Dec 19'
     url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2"
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'lxml')
@@ -59,7 +60,7 @@ def getGameTime():
     for cell in cells:
         if i == 2:
             now = datetime.now()
-            return datetime.strptime(cell.find('span').text.strip(), '%I:%M %p').replace(year = now.year, month = now.month ,day = now.day)
+            return datetime.strptime(cell.find('span').text.strip(), '%I:%M %p').replace(year = now.year, month = now.month, day = now.day)
         i += 1
 
 '''
