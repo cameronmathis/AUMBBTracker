@@ -35,4 +35,4 @@ while (not time.sleep(60)):
         sendTweet(f"The result of today's game {getGamesLocation()} {getGamesOpponent()} was a {getGamesResult()}, with a final score of {getGamesScore()}.")
         if len(sys.argv) == 2:
             sendSMS(f"The result of today's game {getGamesLocation()} {getGamesOpponent()} was a {getGamesResult()}, with a final score of {getGamesScore()}.", sys.argv[1])
-        haveTweetedPreGame = False
+        # haveTweetedPreGame = False
