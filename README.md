@@ -47,18 +47,18 @@ Implemented:
 * Texts final score using Twilio
 
 Work in progress:
-* Tweets that a game is about to start
 * Solve untrusted SSL certificate exception
 
 Feature features:
+* Tweets that a game is about to start
 * Tweet halftime scores
 * Tweet that a game is headed to overtime
 * Tweet that the starting line up is changing from last game
 * Tweet post game stats
 
 ## Status
-Version: 2.1.4 Alpha <br/>
-Project is: _in progress_
+Version: 2.0.0 Beta <br/>
+Project is: _finished_
 
 ## Language details
 Language used: Python </br>
