@@ -1,4 +1,4 @@
-# AUMB Tracker
+#  _NO LONGER SUPPORTED_
 This is a Python Application that tweets final score updates for the Auburn Men's Basketball team while also texting the results to my phone.
 
 ## Table of contents
