@@ -1,5 +1,4 @@
 from FirebaseUtil import *
-from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
 

@@ -1,3 +1,5 @@
-/.vscode
+### VS Code ###
+.vscode/
 
+### Sensitive Files ###
 auth.py
