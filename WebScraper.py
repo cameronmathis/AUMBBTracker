@@ -15,31 +15,3 @@ def getCurrentRecord():
     record = soup.find('ul', class_='ClubhouseHeader__Record')
 
     return record.li.text
-
-
-'''
-Returns a boolean indicating if a game has been played
-'''
-
-
-def checkForGame():
-    previousRecord = getPreviousRecord()
-    currentRecord = getCurrentRecord()
-
-    if not (previousRecord == currentRecord):
-        return False
-
-    return True
-
-
-'''
-Returns a boolean indicating if a loss has occurred
-'''
-
-
-def checkForLoss():
-    if not (checkForGame):
-        setDaysSinceLoss(getDaysSinceLoss() + 1)
-        return
-
-    compareRecords()

@@ -1,14 +1,14 @@
 from datetime import datetime
 import tweepy
 from auth import (
-    twitterConsumerKey,
-    twitterConsumerSecret,
+    twitterAPIKey,
+    twitterAPISecretKey,
     twitterAccessToken,
     twitterAccessTokenSecret
 )
 
 # Authenticate to Twitter
-auth = tweepy.OAuthHandler(twitterConsumerKey, twitterConsumerSecret)
+auth = tweepy.OAuthHandler(twitterAPIKey, twitterAPISecretKey)
 auth.set_access_token(twitterAccessToken, twitterAccessTokenSecret)
 
 api = tweepy.API(auth)
@@ -25,6 +25,9 @@ Sends a tweet
 Parameters: 
     txt - the tweet to be sent
 '''
+
+
 def sendTweet(txt):
     api.update_status(status=txt)
-    print(f"\nTweet sent at {datetime.now()}\n")
+    print(f"\nTweet sent at {datetime.now()}")
+    print(f"Tweet: \"{txt}\"\n")
