@@ -31,9 +31,10 @@ In order to run this application, use the below command:
 
 > ./runAUMBBTracker.sh
 
-_You may need to run the following command on the script:_
+_You may need to run the following commands on the script:_
 
 > sed -i 's/\r$//' runAUMBBTracker.sh
+> chmod +x runAUMBBTracker.sh
 
 ## Status
 
