@@ -1,3 +1,6 @@
+[![license](https://img.shields.io/github/license/cameronmathis/AUMBBTracker)](LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/cameronmathis/AUMBBTracker/badge)](https://www.codefactor.io/repository/github/cameronmathis/AUMBBTracker)
+
 # AU MBB Tracker
 
 This is a Python Application that tweets the number of days since the Auburn Men's Basketball team lost.
