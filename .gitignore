@@ -1,0 +1,9 @@
+### VS Code ###
+.vscode/
+
+### Sensitive Files ###
+auth.py
+
+### Other ###
+database
+__pycache__
