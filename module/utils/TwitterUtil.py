@@ -30,6 +30,6 @@ Parameters:
 def sendTweet(txt):
     api.update_status(status=txt)
     print(f"\nTweet sent at {datetime.now()}")
-    print(f"Tweet: \"{txt}\"\n")
+    print(f"Tweet: \"{txt}\"")
 
     return

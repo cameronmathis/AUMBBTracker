@@ -27,6 +27,10 @@ In order to run this application, use the below command:
 
 > ./runAUMBBTracker.sh
 
+_You may need to run the following command on the script:_
+
+> sed -i 's/\r$//' runAUMBBTracker.sh
+
 ## Status
 
 Version: 3.0.0 Beta </br>
