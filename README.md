@@ -5,6 +5,7 @@ This is a Python Application that tweets the number of days since the Auburn Men
 ## Table of contents
 
 - [General info](#general-info)
+- [Setup](#setup)
 - [Status](#status)
 - [Language details](#Language-details)
 - [Contact](#contact)
@@ -13,9 +14,22 @@ This is a Python Application that tweets the number of days since the Auburn Men
 
 This is a project I decided I wanted to do in order to familiarize myself with Twitter APIs. The Twitter account associated with this project can be found [here](https://twitter.com/AUMBBTracker).
 
+## Setup
+
+_Disclaimer: All instructions given are for a linux based machine._ </br>
+In order to run this application you will need a Twitter Developer Account. It is recommended that you use environment variables or an authentication file to store your account credentials, but you can also hard code them if you would like. A link on setting up environment variables can be found [here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html). </br>
+
+Before you run this application, you need to install the required packages with the below command:
+
+> pip install -r requirements.txt
+
+In order to run this application, use the below command:
+
+> ./runAUMBBTracker.sh
+
 ## Status
 
-Version: 3.0.0 Beta <br/>
+Version: 3.0.0 Beta </br>
 Project is: _finished_
 
 ## Language details

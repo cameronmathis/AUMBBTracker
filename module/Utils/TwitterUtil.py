@@ -23,7 +23,7 @@ except:
 Sends a tweet
 
 Parameters: 
-    txt - the tweet to be sent
+    txt - a string indicating the tweet to be sent
 '''
 
 

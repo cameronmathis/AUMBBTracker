@@ -22,12 +22,17 @@ def scrapeCurrentRecord():
 '''
 Gets a list of all of Auburn's losses according to ESPN
 
+Parameters: 
+    year - an int indication the year of losses to scrape
+
 Returns a string array
 '''
 
 
-def scrapeLosses():
-    url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2"
+def scrapeLosses(year):
+    year = datetime.now().year
+    url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2/season/" + \
+        str(year)
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'lxml')
 
@@ -50,3 +55,19 @@ def scrapeLosses():
         i += 1
 
     return losses
+
+
+'''
+Gets the date Auburn's last loss according to ESPN
+
+Returns a string
+'''
+
+
+def scrapeLastLossDate():
+    losses = []
+    index = 0
+    while not losses:
+        losses = scrapeLosses(datetime.now().year - index)
+
+    return min(losses)

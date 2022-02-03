@@ -32,7 +32,7 @@ Returns a int
 
 def getDaysSinceLoss():
     if (haveLost()):
-        setLastLossDate(min(scrapeLosses()))
+        setLastLossDate(scrapeLastLossDate())
 
     today = datetime.strptime(date.today().strftime("%m/%d/%Y"), "%m/%d/%Y")
     lastLostDate = datetime.strptime(getLastLossDate(), "%m/%d/%Y")

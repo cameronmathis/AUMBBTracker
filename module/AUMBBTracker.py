@@ -12,4 +12,6 @@ def main():
     #     f"It has been {getDaysSinceLoss()} days since AU MBB lost.")
 
 
-main()
+# call the main method
+if __name__ == "__main__":
+    main()
