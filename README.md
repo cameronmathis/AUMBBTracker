@@ -1,4 +1,5 @@
 [![license](https://img.shields.io/github/license/cameronmathis/AUMBBTracker)](LICENSE)
+[![CodeQL](https://github.com/cameronmathis/AUMBBTracker/actions/workflows/codeql-analysis.yaml/badge.svg)](https://github.com/cameronmathis/AUMBBTracker/actions/workflows/codeql-analysis.yaml)
 [![CodeFactor](https://www.codefactor.io/repository/github/cameronmathis/AUMBBTracker/badge)](https://www.codefactor.io/repository/github/cameronmathis/AUMBBTracker)
 
 # AU MBB Tracker
