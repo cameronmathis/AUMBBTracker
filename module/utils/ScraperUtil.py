@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 
 '''
-Gets Auburn's current record according to ESPN
+Gets Auburn's current record according to https://www.espn.com/
 
 Returns a string
 '''
@@ -20,37 +20,35 @@ def scrapeCurrentRecord():
 
 
 '''
-Gets a list of all of Auburn's losses according to ESPN
+Gets a list of all of Auburn's losses according to https://www.sports-reference.com/
 
-Parameters: 
+Parameters:
     year - an int indication the year of losses to scrape
 
-Returns a string array
+Returns a datetime array
 '''
 
 
 def scrapeLosses(year):
-    year = datetime.now().year
-    url = "https://www.espn.com/mens-college-basketball/team/schedule/_/id/2/season/" + \
-        str(year)
+    url = "https://www.sports-reference.com/cbb/schools/auburn/" + \
+        str(year) + "-gamelogs.html"
     page = requests.get(url)
-    soup = BeautifulSoup(page.content, 'lxml')
+    soup = BeautifulSoup(page.content, "lxml")
 
-    table = soup.find('tbody', class_='Table__TBODY')
-    rows = table.find_all('tr')
+    table = soup.find("table", class_="stats_table")
+    tableBody = table.find("tbody")
+    rows = tableBody.find_all("tr")
 
     losses = []
     i = 0
     for row in rows:
         if i >= 2:
-            cells = row.find_all('td')
-            if cells[2].find('span').text == 'L':
-                lossDate = cells[0].find('span').text
+            cells = row.find_all("td")
+            if not (not cells) and ("L" in cells[3].text):
+                lossDate = cells[0].text
                 lossDateTime = datetime.strptime(
-                    lossDate, "%a, %b %d")
-                # need to figure out how to get correct year
-                lossDateTime = lossDateTime.replace(year=datetime.now().year)
-                losses.append(lossDateTime.strftime("%m/%d/%Y"))
+                    lossDate, "%Y-%m-%d")
+                losses.append(lossDateTime)
 
         i += 1
 
@@ -69,5 +67,6 @@ def scrapeLastLossDate():
     index = 0
     while not losses:
         losses = scrapeLosses(datetime.now().year - index)
+        index += 1
 
-    return min(losses)
+    return max(losses).strftime("%m/%d/%Y")
