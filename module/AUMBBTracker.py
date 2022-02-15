@@ -48,8 +48,13 @@ Main method to run the application
 
 
 def main():
-    sendTweet(
-        f"It has been {getDaysSinceLoss()} days since AU MBB lost.")
+    daysSinceLoss = getDaysSinceLoss()
+    if daysSinceLoss == 1:
+        sendTweet(
+            f"It has been {getDaysSinceLoss()} day since AU MBB lost.")
+    else:
+        sendTweet(
+            f"It has been {getDaysSinceLoss()} days since AU MBB lost.")
 
 
 # call the main method
