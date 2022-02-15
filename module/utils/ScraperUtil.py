@@ -2,13 +2,10 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
 
-'''
-Gets Auburn's current record according to https://www.espn.com/
 
-Returns a string
-'''
-
-
+# Gets Auburn's current record according to https://www.espn.com/
+# Returns:
+#   a string
 def scrapeCurrentRecord():
     url = "https://www.espn.com/mens-college-basketball/team/_/id/2/auburn-tigers"
     page = requests.get(url)
@@ -19,16 +16,11 @@ def scrapeCurrentRecord():
     return record.li.text
 
 
-'''
-Gets a list of all of Auburn's losses according to https://www.sports-reference.com/
-
-Parameters:
-    year - an int indication the year of losses to scrape
-
-Returns a datetime array
-'''
-
-
+# Gets a list of all of Auburn's losses according to https://www.sports-reference.com/
+# Parameters:
+#   year - an int indication the year of losses to scrape
+# Returns:
+#   a datetime array
 def scrapeLosses(year):
     url = "https://www.sports-reference.com/cbb/schools/auburn/" + \
         str(year) + "-gamelogs.html"
@@ -55,13 +47,9 @@ def scrapeLosses(year):
     return losses
 
 
-'''
-Gets the date Auburn's last loss according to ESPN
-
-Returns a string
-'''
-
-
+# Gets the date Auburn's last loss according to ESPN
+# Returns:
+#   a string
 def scrapeLastLossDate():
     losses = []
     index = 0

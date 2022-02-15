@@ -3,13 +3,10 @@ from utils.TwitterUtil import sendTweet
 from utils.ScraperUtil import *
 from utils.DatabaseUtil import *
 
-'''
-Checks to see if a loss has occurred
 
-Returns a boolean
-'''
-
-
+# Checks to see if a loss has occurred
+# Returns:
+#   a boolean
 def haveLost():
     # get previous losses
     previousRecord = getRecord()
@@ -24,13 +21,9 @@ def haveLost():
     return False
 
 
-'''
-Calculates the number of days since a loss
-
-Returns a int
-'''
-
-
+# Calculates the number of days since a loss
+# Returns:
+#   an int
 def getDaysSinceLoss():
     if (haveLost()):
         setLastLossDate(scrapeLastLossDate())
@@ -42,11 +35,7 @@ def getDaysSinceLoss():
     return daysSinceLoss.days
 
 
-'''
-Main method to run the application
-'''
-
-
+# Main method to run the application
 def main():
     daysSinceLoss = getDaysSinceLoss()
     if daysSinceLoss == 1:
