@@ -1,6 +1,6 @@
 import shelve
 
-db = "database"
+DATABASE = "database"
 
 
 # Gets the most previous record from database
@@ -8,7 +8,7 @@ db = "database"
 #   a string
 def getRecord():
     try:
-        db = shelve.open(db)
+        db = shelve.open(DATABASE)
         record = db["record"]
         db.close()
         return record
@@ -23,7 +23,7 @@ def getRecord():
 # Parameters:
 #     record - a string indicating the record to be stored in the database
 def setRecord(record):
-    db = shelve.open(db)
+    db = shelve.open(DATABASE)
     db["record"] = record
     db.close()
 
@@ -33,7 +33,7 @@ def setRecord(record):
 #   a string
 def getLastLossDate():
     try:
-        db = shelve.open(db)
+        db = shelve.open(DATABASE)
         lastLostDate = db["lastLossDate"]
         db.close()
         return lastLostDate
@@ -48,6 +48,6 @@ def getLastLossDate():
 # Parameters:
 #     lastLostDate - a string indicating the last lost date to be stored in the database
 def setLastLossDate(lastLostDate):
-    db = shelve.open(db)
+    db = shelve.open(DATABASE)
     db["lastLossDate"] = lastLostDate
     db.close()
