@@ -39,7 +39,7 @@ _You may need to run the following commands on the script:_
 
 ## Status
 
-Version: 3.0.1 Beta </br>
+Version: 3.0.2 Beta </br>
 Project is: _finished_
 
 ## Language details
