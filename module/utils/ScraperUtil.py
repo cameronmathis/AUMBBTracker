@@ -1,3 +1,4 @@
+import logging
 from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
@@ -13,6 +14,8 @@ def scrapeCurrentRecord():
 
     record = soup.find('ul', class_='ClubhouseHeader__Record')
 
+    logging.info(
+        f"Successfully scraped the current record. | Record: {record.li.text}")
     return record.li.text
 
 
@@ -57,4 +60,7 @@ def scrapeLastLossDate():
         losses = scrapeLosses(datetime.now().year - index)
         index += 1
 
-    return max(losses).strftime("%m/%d/%Y")
+    lastLossDate = max(losses).strftime("%m/%d/%Y")
+    logging.info(
+        f"Successfully scraped the last loss date. | Last Loss Date: {lastLossDate}")
+    return lastLossDate
