@@ -1,10 +1,10 @@
+# AU MBB Tracker
+
 [![license](https://img.shields.io/github/license/cameronmathis/AUMBBTracker)](LICENSE)
 [![CodeQL](https://github.com/cameronmathis/AUMBBTracker/actions/workflows/codeql-analysis.yaml/badge.svg)](https://github.com/cameronmathis/AUMBBTracker/actions/workflows/codeql-analysis.yaml)
 [![CodeFactor](https://www.codefactor.io/repository/github/cameronmathis/AUMBBTracker/badge)](https://www.codefactor.io/repository/github/cameronmathis/AUMBBTracker)
 
-# AU MBB Tracker
-
-This is a Python Application that tweets the number of days since the Auburn Men's Basketball team lost.
+This is a Python Application that tweets different stats regarding the Auburn Men's Basketball team.
 
 ## Table of contents
 
@@ -29,17 +29,21 @@ Before you run this application, you need to install the required packages with 
 
 In order to run this application, use the below command:
 
-> ./runAUMBBTracker.sh
+> ./runAUMBBTracker.sh [service to run]
 
 _You may need to run the following commands on the script:_
 
-> sed -i 's/\r$//' runAUMBBTracker.sh
-
+> sed -i 's/\r$//' runAUMBBTracker.sh </br>
 > chmod +x runAUMBBTracker.sh
+
+Services:
+
+- DaysSinceLoss
+- DaysTillGame
 
 ## Status
 
-Version: 3.0.1 Beta </br>
+Version: 3.1.0 Beta </br>
 Project is: _finished_
 
 ## Language details
