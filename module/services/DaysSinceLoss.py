@@ -15,8 +15,9 @@ def haveLost():
     # get current losses
     currentRecord = scrapeCurrentRecord()
     currentLosses = currentRecord.split("-", 1)[1]
+    logging.info(f"currentLosses: {currentLosses}")
     # compare losses
-    if not (previousLosses == currentLosses):
+    if (previousLosses != currentLosses) or (currentLosses == "0"):
         # store current record in database
         setRecord(currentRecord)
         return True

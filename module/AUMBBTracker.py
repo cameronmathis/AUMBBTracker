@@ -30,6 +30,6 @@ def main():
         quit()
 
 
-        # call the main method
+# call the main method
 if __name__ == "__main__":
     main()

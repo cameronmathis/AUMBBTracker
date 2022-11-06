@@ -5,6 +5,7 @@
 auth.py
 
 ### Other ###
-database
+database*
+env
 AUMBBTracker.log
 __pycache__
