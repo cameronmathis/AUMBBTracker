@@ -20,7 +20,7 @@ def getRecord():
         db["record"] = record
         db.close()
         logging.info(
-            f"No record stored in the database. Initializing to {record}.")
+            f"No record stored in the database. Initialed to {record}.")
         return record
 
 
@@ -51,7 +51,7 @@ def getLastLossDate():
         lastLossDate = "01/01/1900"
         setLastLossDate(lastLossDate)
         logging.info(
-            f"No last loss date in the database. Initializing to {lastLossDate}.")
+            f"No last loss date in the database. Initialed to {lastLossDate}.")
         return lastLossDate
 
 
