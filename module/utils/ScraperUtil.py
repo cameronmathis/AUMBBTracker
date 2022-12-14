@@ -55,7 +55,7 @@ def scrapeLosses(year):
 #   a string
 def scrapeLastLossDate():
     losses = []
-    index = 0
+    index = -1
     while not losses:
         losses = scrapeLosses(datetime.now().year - index)
         index += 1
